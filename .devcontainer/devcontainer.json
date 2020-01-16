@@ -1,0 +1,70 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
+// https://github.com/microsoft/vscode-dev-containers/tree/master/containers/javascript-node-10
+{
+	"name": "Node.js 10",
+	"dockerFile": "Dockerfile",
+	// Use 'settings' to set *default* container specific settings.json values on container create. 
+	// You can edit these settings after create using File > Preferences > Settings > Remote.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+		"emmet.showSuggestionsAsSnippets": true,
+		"editor.tabSize": 2,
+		"workbench.iconTheme": "material-icon-theme",
+		"javascript.implicitProjectConfig.checkJs": true,
+		// melhora performance
+		"search.exclude": {
+			"**/.git": true,
+			"**/node_modules": true,
+			"**/bower_components": true,
+			"**/tmp": true
+		},
+		"files.exclude": {
+			"**/.classpath": true,
+			"**/.project": true,
+			"**/.settings": true,
+			"**/.factorypath": true
+		},
+		"files.watcherExclude": {
+			"**/.git/objeccts/**": true,
+			"**/.git/subtree-cache/**": true,
+			"**/node_modules/*/**": true
+		}
+	},
+	// Use 'appPort' to create a container with published ports. If the port isn't working, be sure
+	// your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
+	"appPort": [
+		"0.0.0.0:8081:8081",
+		3000
+	],
+	"runArgs": [
+		"--privileged",
+		"-v",
+		"/dev/bus/usb:/dev/bus/usb"
+	],
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+	// Uncomment the next line to have VS Code connect as an existing non-root user in the container. 
+	// On Linux, by default, the container user's UID/GID will be updated to match your local user. See
+	// https://aka.ms/vscode-remote/containers/non-root for details on adding a non-root user if none exist.
+	// "remoteUser": "node",
+	// Add the IDs of extensions you want installed when the container is created in the array below.
+	// "workspaceFolder": "/workspace",
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"pkief.material-icon-theme",
+		"zignd.html-css-class-completion",
+		"dsznajder.es7-react-js-snippets",
+		"christian-kohler.npm-intellisense",
+		"christian-kohler.path-intellisense",
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"mhutchie.git-graph",
+		"mikestead.dotenv",
+		"msjsdiag.debugger-for-chrome",
+		"naumovs.color-highlight",
+		"VisualStudioExptTeam.vscodeintellicode"
+	]
+}
