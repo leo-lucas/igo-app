@@ -48,7 +48,7 @@ module.exports = {
         "skipBlankLines": true
       }
     ],
-    "max-lines": ["error", { "max": 2, "skipComments": true, "skipBlankLines": true }],
+    "max-lines": ["error", { "max": 150, "skipComments": true, "skipBlankLines": true }],
     "react/prop-types": 0,
     "max-params": ["error", 4],
     "complexity": ["error", { "max": 3 }]
