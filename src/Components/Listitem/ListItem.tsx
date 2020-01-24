@@ -3,15 +3,16 @@ import { View, Image } from 'react-native'
 
 import { profilePic1 } from 'src/Static/images'
 
+import styles from './styles'
+
 /**
- * Displays the list of people that will go
+ * List Item of the person that will go
  * @author Guilherme Zordan
- * @param Props
  */
-export default function ListScreen() {
+export default function ListItem(): JSX.Element {
   return (
     <View>
-      <Image source={profilePic1} />
+      <Image style={styles.pic} source={profilePic1} />
     </View>
   )
 }
