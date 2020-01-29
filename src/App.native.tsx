@@ -9,15 +9,21 @@ import {
 
 import { Text } from './Components'
 
-declare let global: { HermesInternal: null | {} }
-
 import { ListItem } from './Components'
+
+import { profilePic1, profilePic2, profilePic3 } from './Static/images'
+import colors from './Static/colors'
 
 const App = (): JSX.Element => {
   return (
     <SafeAreaView>
-      <Text size={22}>Confirmados</Text>
-      <ListItem name="as" image="dsaasd" />
+      <ScrollView>
+        <Text size={22}>Confirmados</Text>
+        <ListItem bgColor={colors.june} name="Joana" image={profilePic1} />
+        <ListItem bgColor={colors.june} name="Carlos" image={profilePic2} />
+        <Text size={22}>Convidados</Text>
+        <ListItem name="Leo" image={profilePic3} />
+      </ScrollView>
     </SafeAreaView>
   )
 }
