@@ -3,4 +3,5 @@
  * @module Components
  */
 
-export { default as ListItem } from './ListItem'
+export { default as ListItem } from './Listitem'
+export { default as Text } from './Text'

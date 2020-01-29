@@ -1,12 +1,16 @@
 import { StyleSheet } from 'react-native'
 import { scale } from 'react-native-size-matters'
+import colors from '../../Static/colors'
 
 export default StyleSheet.create({
   container: {
-    height: scale(50)
+    flexDirection: 'row',
+    backgroundColor: colors.bleu,
+    padding: 10
   },
   pic: {
-    height: scale(20),
-    width: scale(20)
+    borderRadius: 100,
+    height: scale(60),
+    width: scale(60)
   }
 })

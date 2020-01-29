@@ -20,7 +20,7 @@ import {
 
 // import { ListItem } from '@/Components'
 
-import { ListItem } from 'Components'
+import { ListItem } from './Components'
 
 declare let global: { HermesInternal: null | {} }
 
